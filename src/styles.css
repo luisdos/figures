@@ -1,0 +1,11 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.banner {
+  background-color: indigo;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
