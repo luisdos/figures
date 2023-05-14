@@ -11,10 +11,18 @@ const FigureElement: React.FC<{
 }> = ({ figure, isModalShowing, handleRemove }) => {
   const [showDelete, setShowDelete] = useState<boolean>(false);
 
+  /**
+   * Function to set the variable setShow to true. 
+   * This is only called when the user moves the mouse over the figure container.
+   */
   const mouseEnter = () => {
     setShowDelete(true);
   };
 
+  /**
+   * Function to set the variable setShow to false. 
+   * This is only called when the user moves the mouse outside the figure container.
+   */
   const mouseLeave = () => {
     setShowDelete(false);
   };

@@ -16,26 +16,40 @@ const FigureList: React.FC<{data?: DoublyLinkedList<Figure>}> = () => {
   const [show, setShow] = useState<boolean>(false);
   const [position, setPosition] = useState<string>("");
 
+  /**
+   * Effect to initialize the list state with values from localStorage
+   */
   useEffect(() => {
     const arrFigures = figuresStorage.getFiguresStorage();
     if(arrFigures && (arrFigures.length > 0)) {
       if(!(arrFigures.length === list.getLength())) {
         list.init(arrFigures);
-        setList(list);
-        setArr(list.toArray());
+        setListAndArr(list);
       }
     }
   }, [list]);
 
+  /**
+   * Effect to set values of array of figures to localStorage
+   */
   useEffect(() => {
     if(arr) figuresStorage.setFiguresStorage(arr)
   }, [list, arr]);
+
+  const setListAndArr = (list: DoublyLinkedList<Figure>) => {
+    setList(list);
+    setArr(list.toArray());
+  }
 
   const openModal = (position: string) => {
     setPosition(position);
     setShow(true);
   };
 
+  /**
+   * Function to add a figure to the list.
+   * Checks whether it will be added to the beginning or to the end
+   */
   const handleAddNode = (figure: Figure) => {
     if (position === Positions.First) {
       list.addFirst(figure);
@@ -45,14 +59,12 @@ const FigureList: React.FC<{data?: DoublyLinkedList<Figure>}> = () => {
       return;
     }
 
-    setList(list);
-    setArr(list.toArray());
+    setListAndArr(list);
   };
 
   const handleRemove = (index: number) => {
     list.remove(index);
-    setList(list);
-    setArr(list.toArray());
+    setListAndArr(list);
   };
 
   return (
