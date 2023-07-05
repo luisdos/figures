@@ -1,7 +1,17 @@
-Figures app.
+# Figures app.
 
-English:
-This is a figures administrator where you can add a Square, Circle or Triangle figure to a list of figures. When you add your first figure, you are given the option to add a new figure to the top (head) or to the end (tail) of the list. We use a Doubly linked list to achieve this and to add complexity to this app.
+### English:
+
+This is a figures administrator where you can add a Square, Circle or Triangle figure to a list of figures. When you add your first figure, you are given the option to add a new figure to the top (head) or to the end (tail) of the list. It's used a Doubly linked list to achieve this and to add complexity to this app.
+
+The app saves your figure list automatically in the browser storage (localStorage) so you can acces your list even if you close the browser.
+
+### Español:
+
+Este es un administrador de figuras en donde puedes agregar Cuadrados, Circulos o Triangulos a una lista. Cuando agregas la primer figura, tendras la opcion para agregar una nueva figura al inicio (cabeza) o al final (cola) de la lista. Sse utiliza una Lista Doblemente Ligada para lograr esta funcionalidad y agregar complejidad a la app.
+
+La app guarda la lista de figuras automaticamente en el almacenamiento del navegador (localStorage) asi podras acceder a tu lista incluso si cierras el navegador.
+
 
 You can se a [preview here](https://figures-pi.vercel.app/) deployed on Vercel.
 
