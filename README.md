@@ -1,3 +1,10 @@
+Figures app.
+
+English:
+This is a figures administrator where you can add a Square, Circle or Triangle figure to a list of figures. When you add your first figure, you are given the option to add a new figure to the top (head) or to the end (tail) of the list. We use a Doubly linked list to achieve this and to add complexity to this app.
+
+You can se a [preview here](https://figures-pi.vercel.app/) deployed on Vercel.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
